@@ -1,4 +1,5 @@
-﻿using CsvHelper;
+﻿using Bestellingen.PaymentStrategy;
+using CsvHelper;
 using CsvHelper.Configuration;
 using System;
 using System.Collections.Generic;
@@ -48,33 +49,19 @@ namespace Bestellingen
             if (restaurants.ContainsKey(restaurant) && restaurants[restaurant].Contains(paymentMethod))
             {
                 Console.WriteLine("Thank you for your payment.");
-                if (paymentMethod == "creditcard")
+                IPaymentStrategy paymentStrategy;
+                switch (paymentMethod)
                 {
-                    Console.WriteLine("Please give your full name:");
-                    string name = Console.ReadLine();
-                    string number = "";
-                    var validCreditCardNumberRegEx = new Regex(@"^\d{16}$");
-                    while (!validCreditCardNumberRegEx.IsMatch(number))
-                    {
-                        Console.WriteLine("Please enter a credit card number:");
-                        number = Console.ReadLine();
-                    }
-                    Console.WriteLine("Finally your cvc:");
-                    string cvc = Console.ReadLine();
-                    Console.WriteLine($"Thanks {name} for {number} with cvc: {cvc}");
-                    Console.WriteLine("Please don't forget your credit card.");
+                    case "creditcard":
+                        paymentStrategy = new CcPaymentStrategy();
+                        break;
+                    case "cash":
+                        paymentStrategy = new CashPaymentStrategy();
+                        break;
+                    default:
+                        throw new NotImplementedException();
                 }
-                else if (paymentMethod == "cash")
-                {
-                    while (value > 0)
-                    {
-                        Console.WriteLine($"Please enter coins for {Math.Round(value,2)} euro.");
-                        double amount = double.Parse(Console.ReadLine());
-                        value -= amount;
-                    }
-                    Console.WriteLine($"Here's your change: {-Math.Round(value,2)}");
-                    Console.WriteLine("Please don't forget your change.");
-                }
+                paymentStrategy.Pay(value);
             }
             else
             {
@@ -82,5 +69,7 @@ namespace Bestellingen
             }
 
         }
+
+
     }
 }
