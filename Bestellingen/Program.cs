@@ -58,6 +58,9 @@ namespace Bestellingen
                     case "cash":
                         paymentStrategy = new CashPaymentStrategy();
                         break;
+                    case "bank":
+                        paymentStrategy = new BankPaymentStrategy();
+                        break;
                     default:
                         throw new NotImplementedException();
                 }
