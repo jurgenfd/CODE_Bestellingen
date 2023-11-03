@@ -33,6 +33,8 @@ namespace Bestellingen
 
         }
 
+        // This is the Factory Method of the DP Factory Method!
+        // It returns an IPaymentStrategy object, which is the interface of the Strategy DP.
         public IPaymentStrategy GetPaymentStrategy(string restaurant, string paymentMethod)
         {
             if (restaurants.ContainsKey(restaurant))
