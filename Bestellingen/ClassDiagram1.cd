@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Bestellingen.PaymentMethodFactory">
-    <Position X="1.5" Y="0.5" Width="5.25" />
+    <Position X="0.5" Y="0.5" Width="5.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAACAAAAAQABIAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>PaymentMethodFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -25,31 +25,31 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Bestellingen.PaymentStrategy.BankPaymentStrategy" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2.75" Y="2.75" Width="1.75" />
+    <Position X="2.75" Y="3.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PaymentStrategy\BankPaymentStrategy.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Bestellingen.PaymentStrategy.CashPaymentStrategy" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="0.75" Y="2.75" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>PaymentStrategy\CashPaymentStrategy.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="Bestellingen.PaymentStrategy.CcPaymentStrategy" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2.75" Y="3.75" Width="1.75" />
+    <Position X="2.75" Y="4.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PaymentStrategy\CcPaymentStrategy.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="Bestellingen.PaymentStrategy.CashPaymentStrategy" Collapsed="true">
+    <Position X="1" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PaymentStrategy\CashPaymentStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="Bestellingen.PaymentStrategy.IPaymentStrategy">
-    <Position X="1" Y="3.75" Width="1.5" />
+    <Position X="1" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PaymentStrategy\IPaymentStrategy.cs</FileName>

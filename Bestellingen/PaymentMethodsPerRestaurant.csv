@@ -1,9 +1,9 @@
 ﻿Restaurant;PaymentMethod
 chinese;cash
-chinese;creditcard
+chinese;cc
 dutch;bank
 italian;cash
-american;creditcard
+american;cc
 dutch;cash
-
+us;paypal
 

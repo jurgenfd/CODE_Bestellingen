@@ -18,7 +18,6 @@ namespace Bestellingen
             var reader = new StreamReader("./PaymentMethodsPerRestaurant.csv");
             _factory = new PaymentMethodFactory(reader);
             GoAndEat();
-
         }
 
         private static void GoAndEat()

@@ -13,7 +13,7 @@ namespace Bestellingen.PaymentStrategy
             var validCreditCardNumberRegEx = new Regex(@"^\d{16}$");
             while (!validCreditCardNumberRegEx.IsMatch(number))
             {
-                Console.WriteLine("Please enter a credit card number:");
+                Console.WriteLine("Please enter a sixteen digit credit card number:");
                 number = Console.ReadLine();
             }
             Console.WriteLine("Finally your cvc:");
